@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://e4pt3q3ryqdw"]
+
+[ext_resource type="Script" uid="uid://cxhnanlcs270n" path="res://scenes/link_button.gd" id="1_dbyaq"]
+[ext_resource type="Texture2D" uid="uid://bqy2v84wwxsun" path="res://assets/level1.png" id="2_6y6kj"]
+[ext_resource type="Texture2D" uid="uid://waduimawg81d" path="res://assets/Screenshot_2.png" id="3_ibarm"]
+
+[node name="ColorRect" type="ColorRect" unique_id=1468863903]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.38198858, 0.69575447, 0.7791607, 1)
+
+[node name="LinkButton2" type="LinkButton" parent="." unique_id=357841950]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 393.0
+offset_right = 404.0
+offset_bottom = 433.0
+text = "Level 1"
+script = ExtResource("1_dbyaq")
+scene_to_load = "Level 1"
+
+[node name="LinkButton3" type="LinkButton" parent="." unique_id=1747962794]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 387.0
+offset_right = 859.0
+offset_bottom = 427.0
+text = "Level 2"
+script = ExtResource("1_dbyaq")
+scene_to_load = "Level 2"
+
+[node name="LinkButton6" type="LinkButton" parent="." unique_id=1135840878]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 132.0
+offset_right = 787.0
+offset_bottom = 172.0
+scale = Vector2(3.2098231, 5.4210587)
+script = ExtResource("1_dbyaq")
+scene_to_load = "Level 2"
+
+[node name="LinkButton" type="LinkButton" parent="." unique_id=514926022]
+layout_mode = 0
+offset_left = 963.0
+offset_top = 564.0
+offset_right = 1099.0
+offset_bottom = 604.0
+text = "Go To Main Menu"
+script = ExtResource("1_dbyaq")
+scene_to_load = "MainMenu"
+
+[node name="LinkButton5" type="LinkButton" parent="." unique_id=362294129]
+layout_mode = 0
+offset_left = 67.99982
+offset_top = 177.0
+offset_right = 203.99982
+offset_bottom = 217.0
+scale = Vector2(3.5325577, 4.741203)
+script = ExtResource("1_dbyaq")
+scene_to_load = "Level 1"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=120480427]
+position = Vector2(309, 262.99997)
+scale = Vector2(0.4148149, 0.32887185)
+texture = ExtResource("2_6y6kj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1649516470]
+position = Vector2(876, 246)
+scale = Vector2(0.4148149, 0.32887185)
+texture = ExtResource("3_ibarm")
+
+[connection signal="pressed" from="LinkButton2" to="LinkButton2" method="_on_New_Game_pressed"]
+[connection signal="pressed" from="LinkButton3" to="LinkButton3" method="_on_New_Game_pressed"]
+[connection signal="pressed" from="LinkButton6" to="LinkButton6" method="_on_New_Game_pressed"]
+[connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_New_Game_pressed"]
+[connection signal="pressed" from="LinkButton5" to="LinkButton5" method="_on_New_Game_pressed"]

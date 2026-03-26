@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dghy4kxwm1wl4"]
+
+[ext_resource type="Script" uid="uid://cxhnanlcs270n" path="res://scenes/link_button.gd" id="1_og05h"]
+
+[node name="ColorRect" type="ColorRect" unique_id=1468863903]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.38198858, 0.69575447, 0.7791607, 1)
+
+[node name="Label" type="Label" parent="." unique_id=175022099]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 207.0
+offset_right = 950.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 100
+text = "LEVEL CLEARED"
+
+[node name="LinkButton2" type="LinkButton" parent="." unique_id=357841950]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 390.0
+offset_right = 634.0
+offset_bottom = 430.0
+text = "Continue to Level 2"
+script = ExtResource("1_og05h")
+scene_to_load = "Level 2"
+
+[node name="LinkButton" type="LinkButton" parent="." unique_id=514926022]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 435.0
+offset_right = 636.0
+offset_bottom = 475.0
+text = "Go To Main Menu"
+script = ExtResource("1_og05h")
+scene_to_load = "MainMenu"
+
+[connection signal="pressed" from="LinkButton2" to="LinkButton2" method="_on_New_Game_pressed"]
+[connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_New_Game_pressed"]
